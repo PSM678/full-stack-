@@ -1,0 +1,144 @@
+7E.Write a program using string object properties and methods.
+	code
+-----------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>String Object Example</title>
+<script>
+function stringOperations() {
+let message = " Hello, JavaScript World! ";
+let length = message.length;
+let trimmed = message.trim();
+let upper = trimmed.toUpperCase();
+let lower = trimmed.toLowerCase(); 
+let sliced = trimmed.slice(7, 17); 
+let replaced = trimmed.replace("JavaScript", "String");
+let includesCheck = trimmed.includes("World");
+document.getElementById("output").innerHTML =
+"<h3>String Operations</h3>" +
+"<p><strong>Original:</strong> '" + message + "'</p>" +
+"<p><strong>Trimmed:</strong> '" + trimmed + "'</p>" +
+"<p><strong>Length:</strong>" + length + "</p>" +
+"<p><strong>Uppercase:</strong>" + upper + "</p>" +
+"<p><strong>Lowercase:</strong>" + lower + "</p>" +
+"<p><strong>Sliced (7-17):</strong> '" + sliced + "'</p>" +
+"<p><strong>Replaced 'JavaScript' with 'String':</strong>" + replaced + "</p>" +
+"<p><strong>Includes 'World':</strong>" + includesCheck + "</p>";
+}
+</script>
+</head>
+<body>
+<h2>JavaScript String Object Demo</h2>
+<button onclick="stringOperations()">Perform String Operations</button>
+<div id="output"></div>
+</body>
+</html>
+
+7F.Write a program using regex object properties and methods.
+  code
+---------
+<!DOCTYPE html>
+<html>
+<head>
+<title>RegExp Object Example</title>
+<script>
+function validateInput() {
+let userInput = document.getElementById("textInput").value;
+let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+let isValid = regex.test(userInput);
+let resultMessage = isValid
+? "✅Valid email address!"
+: "❌Invalid email address format.";
+document.getElementById("output").innerHTML =
+"<p><strong>Input:</strong>" + userInput + "</p>" +
+"<p><strong>Result:</strong>" + resultMessage + "</p>" +
+"<p><strong>Pattern Used:</strong>" + regex.toString() + "</p>";
+}
+</script>
+</head>
+<body>
+<h2>JavaScript RegExp Object Demo</h2>
+<label for="textInput">Enter Email Address:</label>
+<input type="text" id="textInput">
+<button onclick="validateInput()">Validate</button>
+<div id="output"></div>
+</body>
+</html>
+
+7G.Write a program using date object properties and methods.
+code
+-----------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date Object Example</title>
+<script>
+function showDateInfo() {
+let now = new Date();
+let dateString = now.toDateString(); 
+let timeString = now.toTimeString(); 
+let year = now.getFullYear();
+let month = now.getMonth() + 1; 
+let day = now.getDate(); 
+let weekday = now.getDay();
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+"Friday", "Saturday"];
+document.getElementById("output").innerHTML =
+"<h3>Date Object Information</h3>" +
+"<p><strong>Full Date:</strong>" + dateString + "</p>" +
+"<p><strong>Time:</strong>" + timeString + "</p>" +
+"<p><strong>Year:</strong>" + year + "</p>" +
+"<p><strong>Month:</strong>" + month + "</p>" +
+"<p><strong>Day of Month:</strong>" + day + "</p>" +
+"<p><strong>Day of Week:</strong>" + days[weekday] + "</p>";
+}
+</script>
+</head>
+<body>
+<h2>JavaScript Date Object Demo</h2>
+<button onclick="showDateInfo()">Show Current Date & Time</button>
+<div id="output"></div>
+</body>
+</html>
+
+7H.Write a program to explain user-defined object by using
+properties, methods, accessors, constructors and display.
+ code
+-------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>User-defined Object Example</title>
+<script>
+function Student(name, age, grade) {
+this.name = name;
+this.age = age;
+this.grade = grade;
+this.displayInfo = function() {
+return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+};
+this.getGrade = function() {
+return this.grade;
+};
+this.setGrade = function(newGrade) {
+this.grade = newGrade;
+};
+}
+function createAndDisplayStudent() {
+let student1 = new Student("Alice", 16, "A");
+student1.setGrade("A+");
+document.getElementById("output").innerHTML =
+"<h3>Student Information</h3>" +
+"<p><strong>Using Method:</strong>" + student1.displayInfo() + "</p>" +
+"<p><strong>Using Getter:</strong> Grade is " + student1.getGrade() + "</p>";
+}
+</script>
+</head>
+<body>
+<h2>User-defined Object in JavaScript</h2>
+<button onclick="createAndDisplayStudent()">Create and Display Student</button>
+<div id="output"></div>
+</body>
+</html>
+
