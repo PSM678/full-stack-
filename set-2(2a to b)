@@ -1,0 +1,82 @@
+
+			EXP-2
+                    =========
+2.A.HTML Tables, Forms and Frames
+Write a HTML program, to explain the working of tables. (use tags: <table>, <tr>, <th>,<td> and attributes: border, rowspan, colspan)
+        code
+--------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Table Example</title> </head>
+<body>
+<h1>HTML Table Demonstration</h1>
+<table border="1"> <tr>
+<th rowspan="2">Name</th> <th colspan="2">Marks</th> <th rowspan="2">Total</th> </tr>
+<tr>
+<th>Math</th> <th>Science</th>
+</tr>
+<tr>
+<td>Alice</td>
+<td>85</td>
+<td>90</td>
+<td>175</td>
+</tr>
+<tr>
+<td>Bob</td>
+<td>78</td>
+<td>88</td>
+<td>166</td>
+</tr>
+<tr>
+<td>Charlie</td> <td>92</td>
+<td>95</td>
+<td>187</td>
+</tr>
+</table>
+</body>
+</html>
+
+2b)2b. Write a HTML program, to explain the working of tables by preparing a timetable.
+ (Note: Use tag to set the caption to the table & also use cell spacing, cell padding, border, rowspan, colspan etc.).
+		code
+-----------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Class Timetable</title> </head>
+<body>
+<h1>School Class Timetable</h1>
+<table border="1" cellspacing="5" cellpadding="10"> <caption><strong>Weekly Class Timetable</strong></caption> <tr>
+<th>Day</th>
+<th>Period 1<br>9:00 - 10:00</th>
+<th>Period 2<br>10:00 - 11:00</th>
+<th>Break<br>11:00 - 11:30</th>
+<th>Period 3<br>11:30 - 12:30</th>
+<th>Period 4<br>12:30 - 1:30</th>
+</tr>
+<tr>
+<td>Monday</td>
+<td>Math</td>
+<td>Science</td>
+<td rowspan="5" align="center">Break</td> <td>English</td>
+<td>History</td>
+</tr>
+<tr>
+<td>Tuesday</td>
+<td>English</td>
+<td>Math</td>
+<td>Geography</td>
+<td>Science</td>
+</tr>
+<tr>
+<td>Wednesday</td>
+<td colspan="2" align="center">Project Work</td>
+<td>Math</td> <td>Art</td>
+</tr>
+<tr> <td>Thursday</td> <td>Science</td> <td>English</td> <td>History</td> <td>Sports</td> </tr>
+<tr>
+<td>Friday</td> <td>Geography</td> <td>Computer</td> <td>Math</td> <td>Music</td> </tr>
+</table>
+</body>
+</html>
