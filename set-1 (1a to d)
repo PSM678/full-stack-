@@ -155,40 +155,4 @@ Each thumbnail image is also a link to a full sized version of the image. Create
 </body> 
 </html>
 
-			EXP-2
-                    =========
-2.A.HTML Tables, Forms and Frames
-Write a HTML program, to explain the working of tables. (use tags: <table>, <tr>, <th>,<td> and attributes: border, rowspan, colspan)
-        code
---------------
-<!DOCTYPE html>
-<html>
-<head>
-<title>HTML Table Example</title> </head>
-<body>
-<h1>HTML Table Demonstration</h1>
-<table border="1"> <tr>
-<th rowspan="2">Name</th> <th colspan="2">Marks</th> <th rowspan="2">Total</th> </tr>
-<tr>
-<th>Math</th> <th>Science</th>
-</tr>
-<tr>
-<td>Alice</td>
-<td>85</td>
-<td>90</td>
-<td>175</td>
-</tr>
-<tr>
-<td>Bob</td>
-<td>78</td>
-<td>88</td>
-<td>166</td>
-</tr>
-<tr>
-<td>Charlie</td> <td>92</td>
-<td>95</td>
-<td>187</td>
-</tr>
-</table>
-</body>
-</html>
+		
