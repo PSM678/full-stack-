@@ -1,0 +1,102 @@
+EXP-8
+===========
+8. JavaScript Conditional Statements and Loops
+a. Write a program which asks the user to enter three integers, obtains the
+numbers from the user and outputs HTML text that displays the larger
+number followed by the words “LARGER NUMBER” in an
+information message dialog. If the numbers are equal, output HTML
+text as “EQUAL NUMBERS”.
+	code
+---------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compare Numbers</title>
+ </head>
+<body>
+<script>
+let num1 = parseInt(prompt("Enter the first integer:"));
+let num2 = parseInt(prompt("Enter the second integer:"));
+ let num3 = parseInt(prompt("Enter the third integer:"));
+if (num1 === num2 && num2 === num3) {
+document.write("<p><strong>EQUAL NUMBERS</strong></p>"); 
+} else {
+let largest = num1;
+if (num2 > largest) {
+largest = num2;
+}
+if (num3 > largest) {
+largest = num3;
+}
+document.write(`<p><strong>${largest} LARGER NUMBER</strong></p>`);
+}
+</script>
+</body>
+ </html>
+
+8B).Write a program to display week days using switch case
+	code
+-------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Week Days with Switch Case</title> </head>
+<body>
+<script>
+// Ask the user to enter a number between 1 and 7
+let dayNumber = parseInt(prompt("Enter a number (1-7) to get the day of the week:"));
+// Use switch case to determine the day switch (dayNumber) {
+case 1:
+document.write("<p>Monday</p>");
+break; case 2:
+document.write("<p>Tuesday</p>");
+break; case 3:
+document.write("<p>Wednesday</p>");
+break; case 4:
+document.write("<p>Thursday</p>");
+break; case 5:
+document.write("<p>Friday</p>");
+break; case 6:
+document.write("<p>Saturday</p>");
+break; case 7:
+document.write("<p>Sunday</p>");
+break; default:
+document.write("<p>Invalid input! Please enter a number between 1 and 7.</p>");
+}
+</script>
+</body>
+</html>
+
+8C.Write a program to print 1 to 10 numbers using for, while and do-while loops.
+	code
+----------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>Print 1 to 10 Using Loops</title>
+ </head>
+<body>
+<h2>Using for loop:</h2>
+ <script>
+for (let i = 1; i <= 10; i++) {
+document.write(i + "");
+}
+</script>
+<h2>Using while loop:</h2>
+ <script>
+let j = 1;
+while (j <= 10) {
+document.write(j + ""); 
+j++;
+}
+</script>
+<h2>Using do-while loop:</h2> 
+<script>
+let k = 1; 
+do {
+document.write(k + "");
+ k++;
+} while (k <= 10);
+ </script>
+</body>
+ </html>
